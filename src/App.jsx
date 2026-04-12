@@ -1,7 +1,10 @@
 import {  Route , Routes } from 'react-router-dom'
-import CounterApp from './pages/CounterApp'
 import Home from './pages/Home'
+import CounterApp from './pages/CounterApp'
+import QuizApp from './pages/QuizApp'
+import QuizAppQuestions from './pages/QuizAppQuestions'
 import "./App.css"
+
 function App(){
 
   return(
@@ -11,6 +14,9 @@ function App(){
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/counter-app" element={<CounterApp />} />
+        <Route path="/quiz-app" element={<QuizApp />} />
+        <Route path="/quiz-app-questions" element={<QuizAppQuestions />} />
+
       </Routes>
 
     </div>
