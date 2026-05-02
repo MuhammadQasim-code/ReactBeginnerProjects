@@ -1,7 +1,6 @@
 import { useState } from "react"
 import Button from "../component/Button"
 import { useNavigate } from "react-router-dom"
-import { useEffect } from "react"
 
 function QuizAppQuestions() {
     const [Index, setIndex] = useState(0)
@@ -151,16 +150,51 @@ function QuizAppQuestions() {
 
 
     if (Index === questions.length) {
-        return <>
-            <h1>Quiz Completed</h1>
-            <h1>Your Score : {Score}</h1>
-            <Button text={"Back to Home"} onClick={BacktoHome} />
-            <Button text={"Restart Quiz"} onClick={restartQuiz} />
-        </>
+    return (
+        <div className="min-h-screen bg-linear-to-br from-slate-800 to-slate-900 text-white flex flex-col">
 
+            <div className="flex justify-between items-center px-6 py-4">
+                <h1 className="text-2xl text-slate-300 font-semibold">Quiz App</h1>
+            </div>
 
+            <div className="flex flex-1 items-center justify-center px-4 bg-linear-to-br from-slate-700 to-slate-900">
 
-    }
+                <div className="w-full max-w-xl bg-linear-to-br from-slate-800 to-slate-900 backdrop-blur-md rounded-2xl shadow-xl p-10 border border-slate-700 text-center">
+
+                    <h1 className="text-3xl md:text-4xl font-bold text-slate-200 mb-6">
+                        🎉 Quiz Completed
+                    </h1>
+
+                    <h2 className="text-xl text-slate-300 mb-8">
+                        Your Score : 
+                        <span className="text-white font-semibold"> {Score}</span>
+                    </h2>
+
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+                        <Button 
+                            text={"Back to Home"} 
+                            onClick={BacktoHome} 
+                            bgcolor="rgb(71, 85, 105)"
+                            textColor={"rgb(203,213,225)"}
+                        />
+
+                        <Button 
+                            text={"Restart Quiz"} 
+                            onClick={restartQuiz} 
+                            bgcolor="rgb(51, 65, 85)"
+                            textColor={"rgb(226,232,240)"}
+                        />
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    )
+}
 
     function BacktoHome() {
         navigate("/")
@@ -175,19 +209,50 @@ function QuizAppQuestions() {
 
     return <>
 
-        <div>
-            <h2>{Index + 1}. {currentQuestion.question}</h2>
+        <div className="min-h-screen bg-linear-to-br from-slate-800 to-slate-900 text-white flex flex-col">
 
-            {currentQuestion.options.map((option, i) => (
-                <Button
-                    key={i}
-                    onClick={() => nextQuestion(option)}
-                    text={`${option}`}
-                />
-            ))}
+    <div className="flex justify-between items-center px-6 py-4">
+        <h1 className="text-2xl text-slate-300 font-semibold">Quiz App</h1>
 
-            <h1>Score : {Score}</h1>
+        <Button 
+            text={"Back Home"} 
+            onClick={() => navigate("/")}  
+            bgcolor="rgb(71, 85, 105)"
+            textColor={"rgb(203,213,225)"}
+        />
+    </div>
+
+    <div className="flex flex-col items-center justify-center flex-1 px-4 bg-linear-to-br from-slate-700 to-slate-900">
+
+        <div className="w-full max-w-2xl bg-linear-to-br from-slate-800 to-slate-900 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-slate-700">
+
+            <h2 className="text-xl md:text-2xl font-semibold text-slate-200 mb-6 text-center">
+                {Index + 1}. {currentQuestion.question}
+            </h2>
+
+            <div className="flex flex-col gap-4">
+                {currentQuestion.options.map((option, i) => (
+                    <button 
+                        key={i}
+                        onClick={() => nextQuestion(option)}
+                        className="w-full py-3 px-4 rounded-xl bg-slate-700 hover:bg-slate-600 transition duration-200 text-slate-200 font-medium shadow-md hover:cursor-pointer"
+                    >
+                        {option}
+                    </button>
+                ))}
+            </div>
+
+            <div className="mt-8 text-center">
+                <h1 className="text-lg font-semibold text-slate-300">
+                    Score : <span className="text-white">{Score}</span>
+                </h1>
+            </div>
+
         </div>
+
+    </div>
+
+</div>
 
 
 

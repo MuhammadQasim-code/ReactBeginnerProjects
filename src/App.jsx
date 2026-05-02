@@ -16,6 +16,8 @@ function App(){
         <Route path="/counter-app" element={<CounterApp />} />
         <Route path="/quiz-app" element={<QuizApp />} />
         <Route path="/quiz-app-questions" element={<QuizAppQuestions />} />
+       
+        
 
       </Routes>
 

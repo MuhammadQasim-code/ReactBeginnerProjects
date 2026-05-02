@@ -28,7 +28,7 @@ function CounterApp() {
       <div className="flex justify-between items-center px-6 py-4 bg-slate-800 shadow-md">
         <h1 className="text-xl font-semibold">Counter App</h1>
 
-        <Button text={"⬅ Back Home"} onClick={() => navigate("/")}  bgcolor="rgb(150, 194, 201)"/>
+        <Button text={"⬅ Back Home"} onClick={() => navigate("/")} textColor={"black"} bgcolor="rgb(150, 194, 201)"/>
           
         
           
@@ -39,9 +39,9 @@ function CounterApp() {
 
         <h1 className="text-4xl font-bold">Counter : {count}</h1>
 
-        <Button bgcolor="rgb(150, 194, 201)" onClick={counter} text="Increase ➕" />
+        <Button textColor="black" bgcolor="rgb(150, 194, 201)" onClick={counter} text="Increase ➕" />
 
-        <Button bgcolor="rgb(150, 194, 201)" onClick={decreaseCounter} text="Decrease ➖" />
+        <Button textColor="black" bgcolor="rgb(150, 194, 201)" onClick={decreaseCounter} text="Decrease ➖" />
 
         <Button textColor="black" bgcolor="rgb(150, 194, 201)" onClick={resetCounter} text="Reset 🔄" />
 
