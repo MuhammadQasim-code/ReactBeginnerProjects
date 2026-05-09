@@ -23,6 +23,10 @@ function CounterApp() {
   }
 
   return (
+
+
+
+    
     <div className="bg-slate-900 min-h-screen text-white">
 
       <div className="flex justify-between items-center px-6 py-4 bg-slate-800 shadow-md">

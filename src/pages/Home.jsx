@@ -38,6 +38,19 @@ function Home() {
         </div>
 
 
+        <div
+          onClick={() => navigate("/color-switcher-app")}
+          className="bg-slate-700 hover:bg-slate-800 cursor-pointer 
+                     rounded-2xl p-6 w-72 text-center shadow-lg 
+                     transition transform hover:-translate-y-2 hover:scale-105"
+        >
+          <h2 className="text-xl font-semibold mb-2">🔴🟠🟡  Color Switcher</h2>
+          <p className="text-sm text-gray-300">
+            Simple Limited Color Switcher 
+          </p>
+        </div>
+
+
 
      <div className="bg-slate-700 rounded-2xl p-6 w-72 text-center shadow-lg opacity-70">
           <h2 className="text-xl font-semibold mb-2">🚧 More Projects</h2>

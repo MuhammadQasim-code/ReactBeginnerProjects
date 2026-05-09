@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Button from "../component/Button"
 import { useNavigate } from "react-router-dom"
+import Timer from "../component/Timer"
 
 function QuizAppQuestions() {
     const [Index, setIndex] = useState(0)
@@ -151,15 +152,15 @@ function QuizAppQuestions() {
 
     if (Index === questions.length) {
     return (
-        <div className="min-h-screen bg-linear-to-br from-slate-800 to-slate-900 text-white flex flex-col">
+        <div className=" min-h-screen bg-linear-to-br from-slate-800 to-slate-900 text-white flex flex-col">
 
             <div className="flex justify-between items-center px-6 py-4">
                 <h1 className="text-2xl text-slate-300 font-semibold">Quiz App</h1>
             </div>
 
-            <div className="flex flex-1 items-center justify-center px-4 bg-linear-to-br from-slate-700 to-slate-900">
+            <div className=" flex flex-1 items-center justify-center px-4 bg-linear-to-br from-slate-700 to-slate-900">
 
-                <div className="w-full max-w-xl bg-linear-to-br from-slate-800 to-slate-900 backdrop-blur-md rounded-2xl shadow-xl p-10 border border-slate-700 text-center">
+                <div className=" w-full max-w-xl bg-linear-to-br from-slate-800 to-slate-900 backdrop-blur-md rounded-2xl shadow-xl p-10 border-2 border-slate-700 text-center">
 
                     <h1 className="text-3xl md:text-4xl font-bold text-slate-200 mb-6">
                         🎉 Quiz Completed
@@ -170,13 +171,13 @@ function QuizAppQuestions() {
                         <span className="text-white font-semibold"> {Score}</span>
                     </h2>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className=" flex flex-col sm:flex-row gap-4 justify-center">
 
                         <Button 
                             text={"Back to Home"} 
                             onClick={BacktoHome} 
-                            bgcolor="rgb(71, 85, 105)"
-                            textColor={"rgb(203,213,225)"}
+                            bgcolor="rgb(51, 65, 85)"
+                            textColor={"rgb(226,232,240)"}
                         />
 
                         <Button 
@@ -226,12 +227,15 @@ function QuizAppQuestions() {
 
         <div className="w-full max-w-2xl bg-linear-to-br from-slate-800 to-slate-900 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-slate-700">
 
+
             <h2 className="text-xl md:text-2xl font-semibold text-slate-200 mb-6 text-center">
                 {Index + 1}. {currentQuestion.question}
             </h2>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col items-center gap-4">
+                <Timer function = {nextQuestion} Index={Index}/>
                 {currentQuestion.options.map((option, i) => (
+                    
                     <button 
                         key={i}
                         onClick={() => nextQuestion(option)}
