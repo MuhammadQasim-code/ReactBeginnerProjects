@@ -22,8 +22,8 @@ const ColorSwitcher = () => {
         <Button 
             text={"Back Home"} 
             onClick={() => navigate("/")}  
-            bgcolor="rgb(71, 85, 105)"
-            textColor={"rgb(203,213,225)"}
+            bgcolor="bg-slate-600"
+            textColor={"text-white"}
         />
     </div>
     

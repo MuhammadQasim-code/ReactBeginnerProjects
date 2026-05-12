@@ -225,7 +225,7 @@ if (Index >= questions.length) {
                     text={"Back Home"}
                     onClick={() => navigate("/")}
                     bgcolor="bg-slate-600"
-                    textColor={"text-slate-300"}
+                    textColor={"text-white"}
                 />
             </div>
 

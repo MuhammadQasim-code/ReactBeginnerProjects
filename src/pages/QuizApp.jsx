@@ -20,8 +20,8 @@ return <>
         <Button 
             text={"Back Home"} 
             onClick={() => navigate("/")}  
-            bgcolor="rgb(71, 85, 105)"
-            textColor={"rgb(203,213,225)"}
+            bgcolor="bg-slate-600"
+            textColor={"text-white"}
         />
     </div>
 
@@ -29,8 +29,8 @@ return <>
         <h1 className="text-4xl text-slate-300 font-bold mb-6">Quiz Time</h1>
 
         <Button 
-            bgcolor={"rgb(71,85,105)"} 
-            textColor={"rgb(203,213,225)"} 
+            bgcolor={"bg-slate-700"} 
+            textColor={"text-white"} 
             text={"Start Quiz"} 
             onClick={questionsPage}
         />
