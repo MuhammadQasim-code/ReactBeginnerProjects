@@ -77,8 +77,8 @@ const TodoList = () => {
                 <Button
                     text={"Back Home"}
                     onClick={() => navigate("/")}
-                    bgcolor="rgb(71, 85, 105)"
-                    textColor={"rgb(203,213,225)"}
+                    bgcolor="bg-slate-700"
+                    textColor={"text-white"}
                 />
 
             </div>
@@ -118,7 +118,7 @@ const TodoList = () => {
                     {arr.map((item , index) => {
                         return <>
                         
-                <div className="flex shadow-lg shadow-slate-400/50 justify-between w-2/3 p-4 m-4 rounded-2xl gap-20 border-2 items-center">
+                <div className="flex shadow-lg shadow-slate-600/50 justify-between w-2/3 p-4 m-4 rounded-2xl gap-20 items-center">
                     <span className="text-2xl font-bold text-white">{item}</span>
                     <div>
                         <Button 
