@@ -10,7 +10,7 @@ function Home() {
         My Projects
       </h1>
 
-      <div className="flex flex-col items-center gap-8">
+      <div className="flex flex-wrap justify-center items-center gap-20 ">
 
         <div
           onClick={() => navigate("/counter-app")}
@@ -47,6 +47,18 @@ function Home() {
           <h2 className="text-xl font-semibold mb-2">🔴🟠🟡  Color Switcher</h2>
           <p className="text-sm text-gray-300">
             Simple Limited Color Switcher 
+          </p>
+        </div>
+
+        <div
+          onClick={() => navigate("/todo-list")}
+          className="bg-slate-700 hover:bg-slate-800 cursor-pointer 
+                     rounded-2xl p-6 w-72 text-center shadow-lg 
+                     transition transform hover:-translate-y-2 hover:scale-105"
+        >
+          <h2 className="text-xl font-semibold mb-2">📝 Todo List</h2>
+          <p className="text-sm text-gray-300">
+            Simple Todo List Project
           </p>
         </div>
 

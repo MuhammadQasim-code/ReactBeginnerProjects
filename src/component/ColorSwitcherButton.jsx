@@ -1,8 +1,8 @@
-function Button({ bgcolor, textColor, onClick, text }) {
 
-        return <>
-
-        <button className={`
+const ColorSwitcherButton = ({ bgcolor, textColor, onClick, text }) => {
+  return (
+    <div>
+      <button className="
                 px-5 py-2 m-2 rounded-xl font-medium
                 shadow-md
                 transition-all duration-300 ease-in-out
@@ -10,14 +10,16 @@ function Button({ bgcolor, textColor, onClick, text }) {
                 hover:shadow-xl
                 hover:-translate-y-1
                 active:scale-95  
-                cursor-pointer
-                ${bgcolor} ${textColor}`}
+                cursor-pointer"
+                style={{backgroundColor : bgcolor , color: textColor} }
                  onClick={onClick}
                 >
                         {text}
                 </button>
+   
+   
+    </div>
+  );
+};
 
-        </>
-}
-
-export default Button
+export default (ColorSwitcherButton);

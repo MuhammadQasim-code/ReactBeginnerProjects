@@ -1,6 +1,7 @@
 import Button from "../component/Button"
 import { useState ,  } from "react";
 import { useNavigate } from "react-router-dom";
+import ColorSwitcherButton from "../component/ColorSwitcherButton";
 
 const ColorSwitcher = () => {
     const [currentColor , setColor] = useState(["Select Color"])
@@ -34,7 +35,7 @@ const ColorSwitcher = () => {
 
             {colors.map((item) => (
 
-                <Button onClick={(()=> changeColor(item))}  key={item} text={item} bgcolor={item} />
+                <ColorSwitcherButton onClick={(()=> changeColor(item))}  key={item} text={item} bgcolor={item} />
 
             ))}
 
