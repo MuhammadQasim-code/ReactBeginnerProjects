@@ -6,6 +6,7 @@ import QuizAppQuestions from './pages/QuizAppQuestions'
 import ColorSwitcher from './pages/ColorSwitcher'
 import TodoList from './pages/TodoList'
 import "./App.css"
+import DeletePopUp from './component/PopUp'
 
 function App(){
 
@@ -20,6 +21,7 @@ function App(){
         <Route path="/quiz-app-questions" element={<QuizAppQuestions />} />
         <Route path="/color-switcher-app" element={<ColorSwitcher />} />
         <Route path='/todo-list' element={<TodoList/>}></Route>
+        <Route path='/delete-pop' element={<DeletePopUp/>}></Route>
 
        
         
